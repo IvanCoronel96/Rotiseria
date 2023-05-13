@@ -1,21 +1,21 @@
 package pb2.rotiseria;
 
-public class Moto extends Delivery{
-	
-	private Integer capacidad = 8;
+public class Bicicleta extends Delivery {
+
+	private Integer capacidad = 4;
 	private Boolean checkeo = true;
 	private Integer contador = 0;
-
-	public Moto(Repartidor repartidor, String licencia) {
-		super(repartidor, licencia);
+	
+	public Bicicleta(Repartidor repartidor) {
+		super(repartidor);
 	}
-
+	
 	public void cargarCaja(Cliente item) {
 		contador += item.cantidadDePedidos();
 	}
 	
 	public Boolean comenzarViaje() {
-		if( contador > capacidad || super.getLicencia() == "" || contador == 0) {
+		if( contador > capacidad ) {
 			this.checkeo = false;
 		}
 		return this.checkeo;
@@ -24,5 +24,5 @@ public class Moto extends Delivery{
 	public Integer cantidadDePedidos() {
 		return contador;
 	}
-
+	
 }
