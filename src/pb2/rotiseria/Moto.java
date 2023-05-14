@@ -10,7 +10,7 @@ public class Moto extends Delivery{
 		super(repartidor, licencia);
 	}
 
-	public void cargarCaja(Cliente item) {
+	public void cargarCaja(Cuenta item) {
 		contador += item.cantidadDePedidos();
 	}
 	

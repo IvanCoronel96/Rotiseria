@@ -10,7 +10,7 @@ public class Bicicleta extends Delivery {
 		super(repartidor);
 	}
 	
-	public void cargarCaja(Cliente item) {
+	public void cargarCaja(Cuenta item) {
 		contador += item.cantidadDePedidos();
 	}
 	
