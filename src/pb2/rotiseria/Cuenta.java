@@ -27,22 +27,32 @@ public class Cuenta {
 		case "canastitas":
 			total += (250*cantidad);
 			break;
+		case "fideos con bolognesa":
+			total += (750*cantidad);
+			break;
+		case "ravioles con estofado":
+			total += (750*cantidad);
+			break;
+		case "guiso de lentejas":
+			total += (750*cantidad);
+			break;
+		case "1kg de helado":
+			total += (1200*cantidad);
+			break;
+		case "1/4 de helado":
+			total += (800*cantidad);
+			break;
+			
 		}
 		
 		if(this.items.size() == 3) {
 			this.items.add(item);
 			this.items.add("1/4 de helado");
-			total += 800;
 		} else {
 			this.items.add(item);
+			}
 		}
-		
-	}
 	
-	public Integer cantidadDePedidos() {
-		return items.size();
-	}
-
 	public Integer paga(String metodo_de_pago) {
 		switch(metodo_de_pago) {
 		case "efectivo":
@@ -56,6 +66,10 @@ public class Cuenta {
 			break;
 		}
 		return total;
+	}
+	
+	public Integer cantidadDePedidos() {
+		return items.size();
 	}
 
 	public ArrayList<String> getItems() {

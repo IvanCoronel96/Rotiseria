@@ -9,11 +9,11 @@ public class Delivery {
 		this.repartidor = repartidor;
 	}
 	
-	public Delivery(Repartidor repartidor, String licencia) { //Contructor para motos delivery
+	public Delivery(Repartidor repartidor, String licencia) { //Contructor para motos y autos delivery
 		this.repartidor = repartidor;
 		this.licencia = licencia;
 	}
-
+	
 	public Repartidor getRepartidor() {
 		return repartidor;
 	}

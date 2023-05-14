@@ -15,7 +15,7 @@ public class Bicicleta extends Delivery {
 	}
 	
 	public Boolean comenzarViaje() {
-		if( contador > capacidad ) {
+		if( contador > capacidad || contador == 0) {
 			this.checkeo = false;
 		}
 		return this.checkeo;
